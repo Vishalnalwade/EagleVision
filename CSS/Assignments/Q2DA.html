@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Appointment Form</title>
+    <style>
+        #form {
+            display: flex;
+        }
+
+        img {
+            height: 550px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid red;
+        }
+
+        #data {
+            width: 50%;
+        }
+
+
+        .row {
+            display: flex;
+        }
+
+        .first {
+            width: 200px;
+        }
+
+        #apt {
+            margin-top: 15px;
+        }
+
+        #name {
+            margin-left: 40px;
+        }
+
+        #state {
+            margin-left: 40px;
+        }
+
+        #Query {
+            height: 60px;
+            width: 300px;
+        }
+
+        #textarea {
+            padding-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <img src="Doctor.jpg" alt="Doctor Image">
+        <div id="data">
+            <form action="Upload.jsp" method="post">
+                <h1>Doctor Appointment Form</h1>
+                <div class="row">
+                    <div class="first">
+                        <label for="date">Appointment Date</label>
+                    </div>
+                    <div class="second">
+                        <input type="date" name="date" id="date">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="time">Appointment Time</label>
+                    </div>
+                    <div class="second">
+                        <input type="time" name="time" id="time">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="name">Name</label>
+                    </div>
+                    <div class="second">
+                        <input type="text" name="fname" id="fname" placeholder="First">
+                        <input type="text" name="lname" id="lname" placeholder="Last">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="gender">Gender </label>
+                    </div>
+                    <div class="second">
+                        <Label for="gender">Male</Label>
+                        <input type="radio" name="gender" id="gender">
+                        <Label for="gender">Female</Label>
+                        <input type="radio" name="gender" id="gender">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="phone">Phone</label>
+                    </div>
+                    <div class="second">
+                        <input type="number" name="phone" id="phone" placeholder="1234567890">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="name">Address</label>
+                    </div>
+                    <div class="second">
+                        <input type="text" name="name" id="city" placeholder="City">
+                        <input type="text" name="name" id="state" placeholder="State">
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first" id="textarea">
+                        <label for="query">Your Query</label>
+                    </div>
+                    <div class="second">
+                        <textarea name="Query" id="Query" placeholder="Add Your Query"></textarea>
+                    </div>
+                </div>
+                <div class="row" id="apt">
+                    <div class="first">
+                        <label for="Atype">Appointment Type</label>
+                    </div>
+                    <div class="second">
+                        <label for="check">Select which appointment type(s) you require</label><br>
+                        <input type="checkbox" name="check">
+                        <Label for="checheck">Cervis checkup</Label><br>
+                        <input type="checkbox" name="check">
+                        <Label for="checheck">Heart checkup</Label><br>
+                        <input type="checkbox" name="check">
+                        <Label for="checheck">Eye check-up</Label><br>
+                        <input type="checkbox" name="check">
+                        <Label for="checheck">Hearing Test</Label><br>
+                        <br>
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

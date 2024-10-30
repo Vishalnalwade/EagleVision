@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form CSS</title>
+    <style>
+        input[type=text],select{
+            width: 100%;
+            border: 2px solid black;
+            /* padding: 10px 20px;
+            margin: 10px 20px; */
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        
+        input[type=password]{
+            width: 100%;
+            border-bottom: 2px solid red;
+            padding: 10px 15px;
+            /* margin: 6px 10px; */
+            margin-top: 10px;
+            box-sizing: border-box;
+            border-radius: 20px;
+        }
+        input[type=submit]{
+            width: 100%;
+            background-color: #4cd10e;
+            color: beige;
+            box-sizing: border-box;
+            /* padding: 10px; */
+            /* margin: 20px; */
+            box-sizing: border-box;
+            border: none;
+        }
+        input[type=submit]:hover{
+            background-color: crimson;
+        }
+        div{
+            background-color: burlywood;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <form action="">
+        <input type="text" name="name" placeholder="Username">
+        <input type="password" name="pass" placeholder="password">
+        
+        <label for="class">Class</label>
+        <select name="class" id="class">
+            <option value="fy">fy</option>
+            <option value="sy">sy</option>
+            <option value="ty">ty</option>
+        </select>
+        
+        <input type="submit" value="Submit">
+    </form>
+</div>
+</body>
+</html>

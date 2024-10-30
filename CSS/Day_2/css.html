@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [id]{
+            background-color: aqua;
+        }
+        p[id]{
+            background-color:brown;
+        }
+        /* [id=""]{
+            background-color: aqua;
+        } */
+
+        .d{
+            height: 200px;
+            width: 200px;
+
+            background-color: aqua;
+        }
+        .d:hover{
+            background-color: blue;
+        }
+        .a{
+            height: 200px;
+            width: 200px;
+            background-color: coral;
+        }
+        .a:active{
+            background-color: rgb(0, 255, 47);
+        }
+        main::first-line{
+            color: rgb(121, 236, 101);
+            text-align: center;
+        }
+        main::first-letter{
+            color: rgb(191, 27, 54);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="demo">Hello Guyes  How are you ?</p>
+    <div class="d">Eagle</div>
+    <div class="a">vision</div>
+
+    <main>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur aliquid blanditiis quisquam eum. Deserunt magnam cupiditate dolore, eveniet vitae natus inventore dolor, dolores quo incidunt molestias ea consequatur blanditiis adipisci!</main>
+</body>
+</html>

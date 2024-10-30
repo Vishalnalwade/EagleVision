@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nav</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: space-between;
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            position: sticky;
+
+        }
+        li a:hover{
+            background-color: red;
+            color: white;
+        }
+        li a{
+            display: block;
+            background-color: rgb(235, 255, 192);
+            width: 100px;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        li a.active{
+            background-color: green;
+        }
+        li{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navigation Bar</h1>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="#">Home</a></li>
+    </ul>
+    <!-- <p>this is simple nav bar</p> -->
+</body>
+</html>

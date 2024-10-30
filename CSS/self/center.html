@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 0px;
+            height: 0px;
+            border-left: 105px solid transparent;
+            border-right: 105px solid transparent;
+            /* margin-left: 100px; */
+        }
+        #block{
+            height: 209px;
+            width: 209px;
+            background-color: aqua;
+            border: 1px solid black;
+
+        }
+        .red{
+            border-top: 105px solid red;
+        }
+        .blue{
+            border-top: 105px solid yellow;
+            -webkit-transform: rotate(180deg);
+        }
+        .green{
+            border-top: 105px solid green;
+            -webkit-transform: rotate(270deg);
+            position: absolute;
+            left: -44px;
+            top: 60px;
+        }
+        .yello{
+            border-top: 105px solid blue;
+            -webkit-transform: rotate(90deg);
+            position: absolute;
+            top: 60px;
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">
+    <div class="red"></div>
+    <div class="blue"></div>
+    <div class="green"></div>
+    <div class="yello"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Padding and outline</title>
+    <style>
+        #form {
+            margin: 100px;
+            padding: 50px;
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            outline-style: double;
+            outline-width: 5px;
+            outline-color: orangered;
+            outline-offset: 10px;
+            background-color: antiquewhite;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#" method="post" id="form">
+        <h2>Login</h2>
+        <br>
+        <label for="uname">Username :
+            <input type="text" name="uname" id="uname">
+        </label>
+        <br>
+        <label for="upass"> Password :
+            <input type="password" name="upass" id="upass">
+        </label>
+        <br><br>
+        <input type="submit" value="Login">
+    </form>
+</body>
+
+</html>

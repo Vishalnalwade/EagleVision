@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        body {
+            background: url(office.jpg)no-repeat;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            align-content: center;
+        }
+
+        .block {
+            height: 350px;
+            width: 500px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.65);
+        }
+
+        h3 {
+            text-align: center;
+            color: white;
+        }
+
+        input[type="email"],
+        [type="password"] {
+
+
+            background-color: rgba(0, 0, 0, 0);
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 30px;
+            border-bottom: 1px solid white;
+            color: white;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            width: 85%;
+        }
+
+        input[type="checkbox"] {
+            margin-left: -185px;
+
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type="submit"] {
+
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 35px;
+            width: 87%;
+            background-color: rgba(14, 192, 14, 0.88);
+            color: white;
+            font-size: 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+        }
+
+        img {
+
+            top: -60px;
+            position: relative;
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .logo {
+
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="block">
+            <div class="logo">
+                <img src="logo.jpg" alt="logo image">
+            </div>
+
+            <form action="#">
+                <h3>LOGIN WINDOW</h3>
+                <input type="email" name="email" placeholder="Your Email Address"><br><br>
+                <input type="password" name="pass" placeholder="Your Password"><br><br>
+                <input type="checkbox" name="term" required>
+                <label for="term">Aggree With Terms & Conditions</label><br><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>

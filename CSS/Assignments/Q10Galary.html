@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: white;
+            height: 50px;
+            background-color: crimson;
+            border-radius: 25px;
+        }
+
+        #main {
+            width: 80%;
+            height: 100%;
+            margin-left: 10%;
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 10px solid black;
+            border-left: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        .ph1 {
+            width: 200px;
+            height: 200px;
+            margin-left: 4%;
+            margin-top: 4%;
+            /* border:2px solid black; */
+            border-radius: 20%;
+            box-sizing: border-box;
+        }
+
+        img[src="nature.jpg"],
+        [src="pig.jpg"],
+        [src="download.jpg"],
+        [src="girl.jpg"],
+        [src="plate.jpg"],
+        [src="g2.jpg"],
+        [src="pari.jpg"],
+        [src="dog.jpg"],
+        [src="images.jpg"] {
+            border-radius: 20%;
+            width: 200px;
+            height: 200px;
+            outline: 2px solid black;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Photo Gallery</h1>
+    <div id="main">
+        <div class="ph1">
+            <img src="images.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="pig.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="download.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="girl.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="plate.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="g2.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="pari.jpg" alt="Nature Image">
+        </div>
+        <div class="ph1">
+            <img src="dog.jpg" alt="Nature Image">
+        </div>
+
+        <div class="ph1">
+            <img src="nature.jpg" alt="Nature Image">
+        </div>
+    </div>
+</body>
+
+</html>

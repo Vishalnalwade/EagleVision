@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Formating and Decoration</title>
+    <style>
+        h1 {
+            font-size: 40px;
+            text-shadow: 2px 2px 4px red;
+        }
+
+        aside {
+            display: flex;
+        }
+
+        #upper {
+            text-transform: uppercase;
+            border: 2px double black;
+            width: 300px;
+            height: 150px;
+            padding: 5px;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .lower {
+            text-transform: lowercase;
+            text-decoration: underline black solid 2px;
+            border: 2px double black;
+            width: 300px;
+            height: 150px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        #cap {
+            margin: 20px;
+            text-transform: capitalize;
+            border: 2px double black;
+            width: 300px;
+            height: 150px;
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Text Shadow</h1>
+    <aside>
+        <p id="upper">This line is in uppercase bacause its css is text-transform: uppercase</p>
+        <p id="cap">This line is in Capatalize form bacause its css is text-transform: capatalize</p>
+        <p class="lower">This line is in lowercase bacause its css is text-transform: lowercase</p>
+    </aside>
+
+
+</body>
+
+</html>

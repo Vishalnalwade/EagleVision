@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+    <style>
+        body {
+            background: url(gg.webp)no-repeat;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            align-content: center;
+        }
+
+        .block {
+            height: 300px;
+            width: 450px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.621);
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 40px;
+            color: white;
+        }
+
+        input[type="email"],
+        [type="password"] {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 30px;
+            width: 85%;
+        }
+
+        input[type="checkbox"] {
+            margin-left: -145px;
+
+        }
+
+        label {
+            color: white;
+        }
+
+        input[type="submit"] {
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 35px;
+            width: 87%;
+            background-color: orange;
+            color: white;
+            font-size: 20px;
+        }
+        a{
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+    <div class="block">
+        <form action="#" method="get">
+            <h3>LOGIN WINDOW</h3>
+            <input type="email" name="email" placeholder="Your Email Address" required><br><br>
+            <input type="password" name="pass" placeholder="Your Password" required><br><br>
+            <input type="checkbox" name="term" required>
+            <label for="term">Aggree With <a href="#">Terms & Conditions</a></label><br><br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</center>
+</body>
+
+</html>

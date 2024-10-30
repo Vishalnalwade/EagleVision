@@ -1,0 +1,46 @@
+html media
+canvas 
+css : Cascading Style Sheet.
+html use elements /tag
+css use ruleset
+css Style we can apply tohtml elements using selector
+
+<p> Hello </p>
+p{
+    color:red;
+    width:100px;
+    height:10px;
+}
+
+p : element ,selector
+color : property name
+red : value
+
+p,h1,div{
+    color:red;
+    width:100px;
+    height:10px;
+}
+
+
+inline 
+<p Style=" property : value "> Hello </p>
+
+
+internal 
+<style>
+
+</style>
+
+
+external
+create separate Css file with .css extention and link it to your html file using link tag
+<link rel="stylesheet" href="file.css"></link>
+
+
+selector
+class .
+id #
+element name
+universal  *
+

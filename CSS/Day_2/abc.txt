@@ -1,0 +1,23 @@
+[attribute]{
+
+}
+
+element[attribute]{
+
+}
+
+[attribute ="value"]{
+
+}
+
+Pseudo class Selector
+
+Selector:pseudo-class{
+    declaration;
+}
+
+Pseudo Element Selector
+
+Selector:pseudo-element{
+    declaration;
+}

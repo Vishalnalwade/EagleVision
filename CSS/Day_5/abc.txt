@@ -1,0 +1,7 @@
+outline width 
+
+dotted
+dashed
+solid
+double inset
+grove 

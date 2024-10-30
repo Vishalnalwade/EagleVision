@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Table</title>
+    <style>
+        /* overflow */
+
+        
+        table,th,td{
+            border: 2px solid black;
+            /* border-left: none; */
+        }
+        table{
+            width: 50%;
+
+            border-collapse: collapse;
+        }
+        th{
+            
+            height: 50px;
+           
+        }
+        td{
+            text-align: center;
+            height: 30px;
+            vertical-align:middle;
+        }
+        th , td{
+            padding: 20px;
+        }
+        /* tr:hover{background-color:red;} */
+        /* tr:hover{color:red;} */
+
+        tr:nth-child(odd){background-color: gray;}
+        tr:nth-child(even){background-color :chartreuse;}
+        /* tr:nth-child(odd){background-color :rgb(94, 175, 213);} */
+        
+        caption{
+            margin-top: 20px;
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <caption>Student Details</caption>
+        <tr>
+            <th>Roll no</th>
+            <th>Name</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Vishal</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Ujjval</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sidharth</td>
+        </tr>
+    </table>
+</body>
+</html>

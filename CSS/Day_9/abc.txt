@@ -1,0 +1,10 @@
+Four link states
+
+unvisited
+visited
+hover 
+active
+
+rules
+hover must be come afetr unvisited and visited statement
+active must come afetr hover

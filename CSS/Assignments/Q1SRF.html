@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student Registation Form</title>
+    <style>
+        table {
+            width: 100%;
+        }
+
+        table,
+        th,
+        td {
+            background-color: antiquewhite;
+            border: 1px solid black;
+            /* border-collapse: collapse; */
+        }
+
+        .col1 {
+            width: 30%;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        #head {
+            box-sizing: border-box;
+            font-size: 25px;
+            align-content: center;
+            padding: 1%;
+            background-color: darksalmon;
+        }
+
+        #Submit {
+            text-align: center;
+        }
+
+        button {
+            background-color: red;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="Upload.jsp" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4" id="head">Student Registation Form</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col1">Student Name </td>
+                    <td><input type="text" placeholder="First Name" name="sname" id="sname"></td>
+                    <td><input type="text" placeholder="Middle Name" name="mname" id="mname"></td>
+                    <td><input type="text" placeholder="Last Name" name="lname" id="lname"></td>
+                </tr>
+                <tr>
+                    <td class="col1">Father's Name</td>
+                    <td><input type="text" placeholder="Enter Your Father's Name" name="fname" id="fname"></td>
+                    <td>Mother's Name</td>
+                    <td><input type="text" placeholder="Enter Your Mother's Name" name="momname" id="momname"></td>
+                </tr>
+                <tr>
+                    <td class="col1">Date Of Birth</td>
+                    <td><input type="date" name="dob" id="dob"></td>
+                    <td>Gender</td>
+                    <td>
+                        <Label for="gender">Male</Label>
+                        <input type="radio" name="gender" id="gender">
+                        <Label for="gender">Female</Label>
+                        <input type="radio" name="gender" id="gender">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Category</td>
+                    <td>
+                        <Label for="Category">Gen</Label>
+                        <input type="radio" name="Category" id="Category">
+                        <Label for="Category">OBC</Label>
+                        <input type="radio" name="Category" id="Category">
+                        <Label for="Category">SC/ST</Label>
+                        <input type="radio" name="Category" id="Category">
+                    </td>
+                    <td>Handicapped</td>
+                    <td>
+                        <Label for="Handicapped">Yes</Label>
+                        <input type="radio" name="Handicapped" id="Handicapped">
+                        <Label for="gender">No</Label>
+                        <input type="radio" name="Handicapped" id="Handicapped">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alumni</td>
+                    <td>
+                        <Label for="Alumni">Yes</Label>
+                        <input type="radio" name="Alumni" id="Alumni">
+                        <Label for="Alumni">No</Label>
+                        <input type="radio" name="Alumni" id="Alumni">
+                    </td>
+                    <td>EWS</td>
+                    <td>
+                        <Label for="ews">Yes</Label>
+                        <input type="radio" name="ews" id="ews">
+                        <Label for="ews">No</Label>
+                        <input type="radio" name="ews" id="ews">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email ID</td>
+                    <td><input type="email" name="email" id="email"></td>
+                    <td>Mobile No.</td>
+                    <td><input type="number" name="number" id="number"></td>
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>
+                        <select name="state" id="state">
+                            <optgroup label="Select any One">
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                    <td>City</td>
+                    <td>
+                        <select name="City" id="City">
+                            <optgroup label="Select any One">
+                                <option value="Pune">Pune</option>
+                                <option value="Mumbai">Mumbai</option>
+                                <option value="Bangalore">Bangalore</option>
+                            </optgroup>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Photo</td>
+                    <td><input type="file" name="photo" id="photo"></td>
+                    <td>Upload Signature</td>
+                    <td><input type="file" name="sign" id="sign"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td colspan="3" id="Submit"><button type="submit" onclick="upload()">Submit</button></td>
+                </tr>
+            </tbody>
+
+        </table>
+    </form>
+
+</body>
+
+</html>

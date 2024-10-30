@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        table,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        td {
+            height: 35px;
+            width: 35px;
+        }
+
+        table {
+
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 300px;
+            box-sizing: border-box;
+        }
+
+        .box-1 {
+            margin: 40px;
+            border: 2px solid rgb(14, 246, 14);
+            width: calc(4*35px);
+            height: calc(4*35px);
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        .box-2 {
+            margin: 40px;
+            border: 2px solid red;
+            width: calc(4*35px);
+            height: calc(4*35px);
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        .box-3 {
+            margin: 40px;
+            border: 2px solid blue;
+            width: calc(4*35px);
+            height: calc(4*35px);
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        .box-4 {
+            margin: 40px;
+            border: 2px solid yellow;
+            width: calc(4*35px);
+            height: calc(4*35px);
+            display: flex;
+            flex-wrap: wrap;
+            background-color: white;
+        }
+
+        .block-1 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid rgb(14, 246, 14);
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: rgb(14, 246, 14);
+
+        }
+
+        .br-1 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid red;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: red;
+
+        }
+
+        .bl-1 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid blue;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: blue;
+
+        }
+
+        .bc-1 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid yellow;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: yellow;
+
+        }
+
+        .block-2 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid rgb(14, 246, 14);
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: rgb(14, 246, 14);
+        }
+
+        .br-2 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid red;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: red;
+        }
+
+        .bl-2 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid blue;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: blue;
+        }
+
+        .bc-2 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid yellow;
+            margin-left: 20px;
+            margin-top: 20px;
+            border-radius: 10%;
+            background-color: yellow;
+        }
+
+        .block-3 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid rgb(14, 246, 14);
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: rgb(14, 246, 14);
+
+        }
+
+        .br-3 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid red;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: red;
+
+        }
+
+        .bl-3 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid blue;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: blue;
+
+        }
+
+        .bc-3 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid yellow;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: yellow;
+
+        }
+
+        .block-4 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid rgb(14, 246, 14);
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: rgb(14, 246, 14);
+
+        }
+
+        .br-4 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid red;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: red;
+
+        }
+
+        .bl-4 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid blue;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: blue;
+
+        }
+
+        .bc-4 {
+            height: 35px;
+            width: 35px;
+            border: 2px solid yellow;
+            margin-left: 20px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            border-radius: 10%;
+            background-color: yellow;
+
+        }
+
+        .green {
+            background-color: rgb(14, 246, 14);
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .yello {
+            background-color: yellow;
+        }
+
+        .box-size {
+            /* min-height: 100px;
+            min-width: 100px;  */
+            box-sizing: border-box;
+            /* box-sizing: content-box;  */
+            /* width: 0px;
+            height: 0px; */
+            /* max-height: vh; */
+
+            /* border: px solid black; */
+
+        }
+
+        #center {
+            height: 130px;
+            width: 130px;
+            background-color: black;
+            /* border: 1px solid black; */
+        }
+
+        .try {
+
+            width: 0px;
+            height: -px;
+            border-left: 65px solid transparent;
+            border-right: 65px solid transparent;
+
+        }
+
+        #t1 {
+            border-top: 65px solid red;
+            box-sizing: border-box;
+        }
+
+        #t2 {
+            box-sizing: border-box;
+            border-top: 65px solid yellow;
+            -webkit-transform: rotate(180deg);
+        }
+
+        #t3 {
+            box-sizing: border-box;
+            border-top: 65px solid rgb(14, 246, 14);
+            -webkit-transform: rotate(270deg);
+            position: relative;
+            left: -32px;
+            top: -97px;
+            padding: 0px;
+        }
+
+        #t4 {
+            box-sizing: border-box;
+            border-top: 65px solid blue;
+            -webkit-transform: rotate(90deg);
+            position: relative;
+            top: -162px;
+            left: 32px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="6" rowspan="6" class="green">
+                <div class="box-1">
+                    <div class="block-1"></div>
+                    <div class="block-2"></div>
+                    <div class="block-3"></div>
+                    <div class="block-4"></div>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="6" rowspan="6" class="red">
+                <div class="box-2">
+                    <div class="br-1"></div>
+                    <div class="br-2"></div>
+                    <div class="br-3"></div>
+                    <div class="br-4"></div>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td class="red"></td>
+            <td class="red"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="red"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="red"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="red"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="red"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="green"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td colspan="3" rowspan="3" class="box-size">
+                <div id="center">
+                    <div class="try" id="t1"></div>
+                    <div class="try" id="t2"></div>
+                    <div class="try" id="t3"></div>
+                    <div class="try" id="t4"></div>
+                </div>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td class="blue"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="blue"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="6" rowspan="6" class="yello">
+                <div class="box-4">
+                    <div class="bc-1"></div>
+                    <div class="bc-2"></div>
+                    <div class="bc-3"></div>
+                    <div class="bc-4"></div>
+                </div>
+
+            </td>
+            <td></td>
+            <td class="yello"></td>
+            <td></td>
+            <td colspan="6" rowspan="6" class="blue">
+                <div class="box-3">
+                    <div class="bl-1"></div>
+                    <div class="bl-2"></div>
+                    <div class="bl-3"></div>
+                    <div class="bl-4"></div>
+                </div>
+            </td>
+
+        </tr>
+        <tr>
+            <td></td>
+            <td class="yello"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="yello"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="yello"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="yello"></td>
+            <td class="yello"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
