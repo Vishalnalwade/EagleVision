@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="data" >
+        <br>
+        <button id="button"> Add Task</button>
+    </div>
+</body>
+<script>
+    document.getElementById('button').addEventListener('click', function(){
+        const input=document.getElementById('data').value;
+        if(input){
+            let elements=JSON.parse(localStorage.getItem('elements')) || [];
+            elements.push(input);
+            localStorage.setItem('elements',Json.stringify(elements));
+            document.getElementById('data').value='';
+        }
+    });
+
+</script>
+</html>

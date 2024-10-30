@@ -1,0 +1,16 @@
+const string="Hello World woRld";
+// console.log(string.charAt(0));
+// console.log(string.charCodeAt(0));
+// console.log(string.codePointAt(1));
+// console.log(string.concat(" India"));
+// console.log(string.endsWith("d"));
+// console.log(string.includes("World",0));
+// console.log(string.indexOf("o"));
+// console.log(string.lastIndexOf("o"));
+// console.log(string.length);
+// console.log(string.localeCompare("d",3,2));
+// console.log(string.match("rld"));
+// let a=string.match(/rld/);
+// console.log(a.length);
+// console.log(string.matchAll(/Hello/gi));
+console.log(string.toLocaleUpperCase);

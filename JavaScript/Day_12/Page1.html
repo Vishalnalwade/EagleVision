@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Item</title>
+    <style>
+        body {
+            display: grid;
+        }
+
+        div {
+            margin: 20px;
+            padding: 20px;
+            width: 20%;
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+            box-shadow: 3px 3px 6px red;
+        }
+    </style>
+</head>
+
+<body>
+    <Div>
+        <label for="sk">Set Key</label>
+        <input type="text" name="sk" id="sk" placeholder="Enter Key for array">
+        <br><br>
+        <label for="element">Enter Values for Array</label>
+        <input type="text" name="element" id="element" placeholder="23,4,33,6 or  abc,xyz,pqr"><br><br>
+        <button onclick="addData()">Add</button>
+    </Div>
+    <div>
+        <label for="delete">Remove Key</label>
+        <input type="text" name="delete" id="delete" placeholder="Enter Key for remove pair">
+        <br><br>
+        <button onclick="removeData()">Remove</button>
+    </div>
+
+    <a href="Page2.html">Go to Second Page</a>
+</body>
+<script>
+    function addData() {
+        let id = document.getElementById("sk").value;
+        let ele = document.getElementById("element").value;
+        if (id && ele) {
+            const arr = ele.split(",");
+            var key = JSON.stringify(id);
+            var value = JSON.stringify(arr);
+            localStorage.setItem(key, value);
+        }
+        else {
+            alert("Please Enter Both Values");
+        }
+        document.getElementById("sk").value = '';
+        document.getElementById("element").value = '';
+    }
+
+    function removeData() {
+        let remove = document.getElementById("delete").value;
+        const key = JSON.stringify(remove);
+        localStorage.removeItem(key);
+        document.getElementById("delete").value = '';
+    }
+</script>
+
+</html>

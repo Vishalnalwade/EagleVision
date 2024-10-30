@@ -1,0 +1,57 @@
+*JS Session 4 Assignment 
+
+ 1. Dynamic Full Name Generation 
+- Check if the first character of firstname or lastname is capital or not if not then Dynamically concatenate the two inputs into a full name, ensuring the first character of names are properly capitalized.
+  
+  *Hints:*
+  - Convert the first character of each name to uppercase while making the rest of the name lowercase.
+
+  2. Reversing a String Dynamically*
+- Write a program that reverses the word and prints it.
+
+  *Hint:*
+  - Convert the string into an array of characters using .split(), then reverse the array and join it back into a string.
+
+  *Example Input:*  
+  JavaScript  
+  *Example Output:*  
+  tpircSavaJ
+
+3. Count Occurrences of a Character*
+- Write a program that dynamically counts how many times the character occurs in the sentence.
+
+  *Example Input:*  
+  Sentence: JavaScript is awesome!  
+
+*4. Word Search*
+
+- Write a program that finds whether the word exists in the sentence and return the word's index within the sentence.
+
+  *Example Input:*  
+  Sentence: Learning JavaScript is fun  
+  Word: JavaScript  
+  *Example Output:*  
+  The word 'JavaScript' starts at index 9.
+
+ 5. Check if a String is a Palindrome 
+- Write a program that checks if the word is a palindrome (a word that reads the same forwards and backwards, like "racecar").
+
+  *Hint:* 
+  - Reverse the word and compare it to the original.
+
+  *Example Input:*  
+  madam  
+  *Example Output:*  
+  true
+
+ 6. Replace All Vowels with a Special Character 
+- Ask the user to input a sentence.
+- Replace all the vowels in the sentence with a special character, such as *.
+
+  *Hint:*
+  - Use .replace() in combination with a regular expression (/[aeiou]/gi) to find and replace vowels.
+
+  *Example Input:*  
+  I love programming!  
+  *Example Output:*  
+  * l*v* pr*gr*mm*ng!

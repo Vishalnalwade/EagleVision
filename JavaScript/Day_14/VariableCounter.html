@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VariableCounter</title>
+    <style>
+        #display {
+            background-color: aliceblue;
+            text-align: center;
+        }
+
+        div {
+            margin: 50px;
+            text-align: center;
+            border: 2px solid black;
+            padding: 20px;
+            width: 200px;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <!-- <input type="number" id="display" value="0" readonly><br><br> -->
+        <h1 id="display">0</h1>
+        <button onclick="increment()">Increse</button>
+        <button onclick="decrement()">Decrease</button>
+    </div>
+</body>
+<script>
+    var value = 0;
+    function increment() {
+        value++;
+        document.getElementById('display').innerHTML = value;
+    }
+
+    // function increment(){
+    //     let num=document.getElementById('display').value;
+    //     num3=parseInt(num);
+    //     num2=num3+1;
+    //     document.getElementById('display').value=num2;
+    // }
+
+    function decrement() {
+        value--;
+        document.getElementById('display').innerHTML = value;
+    }
+
+    // function decrement(){
+    //     let num=document.getElementById('display').value;
+    //     num3=parseInt(num);
+    //     num2=num3-1;
+    //     document.getElementById('display').value=num2;
+    // }
+</script>
+
+</html>

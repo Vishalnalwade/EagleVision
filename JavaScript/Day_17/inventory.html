@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Inventory Management System</h1>
+
+  <!-- Logout Button -->
+  <button onclick="logout()">Logout</button>
+
+  <!-- Product Filter -->
+  <div id="filter-section">
+    <input type="text" id="search-name" placeholder="Search by name" oninput="filterProducts()">
+    <select id="filter-category" onchange="filterProducts()">
+      <option value="">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Furniture">Furniture</option>
+      <option value="Clothing">Clothing</option>
+    </select>
+  </div>
+
+  <!-- Product Form for Add/Edit -->
+  <div id="product-form">
+    <h2 id="form-title">Add Product</h2>
+    <input type="text" id="product-name" placeholder="Product Name">
+    <input type="number" id="product-quantity" placeholder="Quantity">
+    <input type="number" id="product-price" placeholder="Price">
+    <select id="product-category">
+      <option value="Electronics">Electronics</option>
+      <option value="Furniture">Furniture</option>
+      <option value="Clothing">Clothing</option>
+    </select>
+    <button onclick="saveProduct()">Save</button>
+  </div>
+
+  <!-- Product List -->
+  <div id="product-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

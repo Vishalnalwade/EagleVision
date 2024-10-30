@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add Element</title>
+<style>
+body{
+background-image: url('bg.jpg'); 
+background-repeat: no-repeat; 
+background-attachment: fixed; 
+background-size: 100% 100%;
+}
+.main{
+width: 50%; 
+min-width: 100px; 
+max-width: 1000px; 
+height: 200px; 
+min-height: 100px; 
+max-height: 400px; 
+margin: 0 auto;
+margin-top: 5%;
+padding: 30px; 
+background-color: #f0f0f0; 
+border-radius: 15px;
+text-align: center;
+}
+h1{
+width: 100%;
+color:rgb(255, 255, 255);
+border-radius: 5px;
+text-align: center;
+background-image: url('bg11.jpg'); 
+background-color: darkmagenta;
+}
+input[type="text"]{
+width: 94%;
+padding: 5px;
+margin: 2%;
+background-color: transparent;
+border: none;
+border-bottom: 3px solid rgb(135, 4, 89);
+font-size: 15px;
+}
+#addButton{
+width: 100%;
+padding: 5px;
+margin: 2%;
+background-color: rgb(139, 0, 139);
+color: white;
+font-size: large;
+border-radius: 5px;
+font-weight: bold;
+}
+#addButton:hover {
+background-color: rgb(71, 0, 69);
+}
+a{
+font-size: large;
+text-decoration: none;
+}
+a:hover{
+color: rgb(170, 5, 38);
+font-size: 20px;
+}
+</style>
+</head>
+<body>
+<div class="main">
+<h1>Add Element</h1>
+<input type="text" id="elementInput" placeholder="Enter an element">
+<br>
+<button id="addButton">Add Element</button><br>
+<a href="display-elements.html">Go to Display Elements</a>
+<script>
+    document.getElementById('addButton').addEventListener('click', function() {
+const input = document.getElementById('elementInput').value;
+if (input) {
+// Retrieve existing array from Local Storage or create a new one
+let elements = JSON.parse(localStorage.getItem('elements')) || [];
+elements.push(input); // Add the new element
+localStorage.setItem('elements', JSON.stringify(elements)); // Save back to Local 
+Storage
+document.getElementById('elementInput').value = ''; // Clear the input field
+// alert('Element added!');
+} else {
+alert('Please enter a value.');
+}
+});
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Item</title>
+    <style>
+        div {
+            margin: 20px;
+            padding: 20px;
+            width: 20%;
+            border: 2px solid black;
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+            box-shadow: 3px 3px 6px red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="key">Enter a Key</label>
+        <input type="text" name="key" id="key" placeholder="Enter a Key">
+        <br><br>
+        <button onclick="showData()">Show Data</button>
+    </div>
+    <ul id="result"></ul>
+    <a href="Page1.html">Go to First Page</a>
+</body>
+<script>
+    function showData() {
+        const get = document.getElementById('key').value;
+        const key = JSON.stringify(get);
+        const resultlist = document.getElementById('result');
+
+        resultlist.innerHTML = '';
+
+        if (localStorage.getItem(key) !== null) {
+            const value = localStorage.getItem(key);
+            const arr = JSON.parse(value);
+            for (let i = 0; i < arr.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = arr[i];
+                resultlist.appendChild(li);
+            }
+        }
+        else {
+            alert(`Key ${key} is not found in local Storage `);
+        }
+        document.getElementById('key').value = '';
+    }
+</script>
+
+</html>

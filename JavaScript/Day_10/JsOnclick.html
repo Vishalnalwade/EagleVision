@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Js Button Function</title>
+    <style>
+        body{
+            background-color:gray;
+        }
+        .box {
+
+            margin-left: 100px;
+            margin-top: 100px;
+            height: 400px;
+            width: 800px;
+            background-color:rgb(59, 224, 122);
+            display: flex;
+        }
+
+        #image {
+            margin-left: 100px;
+            margin-top: 100px;
+            display: flex;
+        }
+
+        div img {
+            width: 180px;
+            height: 180px;
+        }
+
+        button {
+            margin-top: 70px;
+            margin-left: 30px;
+            height: 30px;
+            width: 70px;
+        }
+
+        #d {
+            margin-left: 100px;
+            margin-top: 150px;
+            display: flex;
+            height: 50px;
+            width: 100px;
+            border: solid black 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div id="image">
+            <img src="tail.jpg" alt="image" id="i">
+            <button type="button" onclick="change()" id="h">Head</button>
+            <button type="button" onclick="changeAgain()" id="t">Tail</button>
+        </div>
+        <div id="d">
+            <p id="p"></p>
+        </div>
+    </div>
+    <script>
+        function change() {
+            document.getElementById("i").src = "head.png";
+            document.getElementById("h").style.background = "orange";
+            document.getElementById("t").style.background = "none";
+            document.getElementById("p").innerHTML = "This is Head";
+        }
+        function changeAgain() {
+            document.getElementById("i").src = "tail.jpg";
+            document.getElementById("t").style.background = "orange";
+            document.getElementById("h").style.background = "none";
+            document.getElementById("p").innerHTML = "This is Tail";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+
+<body>
+    <h1>CRUD Operations with JSONPlaceholder</h1>
+    <form id="create-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title"><br><br>
+        <label for="body">Body:</label>
+        <textarea name="body" id="body"></textarea><br><br>
+        <button id="create-button" type="button" onclick="createPost()">Create Post</button>
+    </form>
+    <br>
+    <button id="read-button" type="button" onclick="readPost()">Display All Post</button>
+    <br><br>
+    <form id="up">
+        <label for="upt">Title:</label>
+        <input type="text" id="upt" name="upt"><br><br>
+        <label for="upd">Body:</label>
+        <textarea name="upd" id="upd"></textarea><br><br>
+        <button id="update-button" type="button" onclick="updatePost()">Update Post</button>
+    </form><br>
+    <form>
+        <input type="number" min="1" max="100" id="delete" placeholder="Enter Id">
+        <button id="delete-button" type="button" onclick="deletePost()">Delete Post</button>
+    </form>
+    <br>
+    <form>
+        <input type="number" min="1" max="100" id="search" placeholder="Enter Id">
+        <button id="Search-button" type="button" onclick="searchPost()">Search Post</button>
+    </form>
+    <br><br>
+    <div id="post-data"></div>
+</body>
+<script src="CRUD.js"></script>
+
+</html>

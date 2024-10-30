@@ -1,0 +1,22 @@
+let x=5;
+let y=3;
+
+console.log('Assignment Operations');
+x+=y;
+console.log("x+=y :"+x);
+console.log("x+=y :"+y);
+x-=y;
+console.log("x-=y :"+x);
+console.log("x-=y :"+y);
+x*=y;
+console.log("x*=y :"+x);
+console.log("x*=y :"+y);
+x/=y;
+console.log(`x/=y :${x}`);
+console.log(`x/=y :${y}`);
+x%=y;
+console.log("x%=y :"+x);
+console.log("x%=y :"+y);
+x**=y;
+console.log("x**=y :"+x);
+console.log("x**=y :"+y);

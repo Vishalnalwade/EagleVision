@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Item</title>
+    <style>
+        body {
+            display: grid;
+        }
+
+        div {
+            /* margin: 20px; */
+            padding: 20px;
+            /* width: 250px; */
+            max-width: 100%;
+            color: white;
+            background-color: black;
+            border: 2px solid black;
+            box-shadow: 3px 3px 6px red;
+            /* align-items: center; */
+            /* text-align: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="key">Show Task</label><br>
+        <input type="text" name="key" id="key" placeholder="Enter Task Number ">
+        <br><br>
+        <button onclick="showData()">Show Task</button>
+    </div>
+    <ol id="result"></ol>
+
+    <Div>
+        <label for="sk">Task Number</label><br>
+        <input type="text" name="sk" id="sk" placeholder="Add task Number">
+        <br><br>
+        <label for="element">Task</label><br>
+        <input type="text" name="element" id="element" placeholder="Add Task"><br><br>
+        <button onclick="addData()">Add Task</button>
+    </Div>
+    <div style="margin-top: 20px;">
+        <label for="delete">Remove Key</label><br>
+        <input type="text" name="delete" id="delete" placeholder="Enter Key for remove pair">
+        <br><br>
+        <button onclick="removeData()">Remove Task</button>
+    </div>
+
+   
+</body>
+<script>
+    function addData() {
+        let id = document.getElementById("sk").value;
+        let ele = document.getElementById("element").value;
+        if (id && ele) {
+            const arr = ele.split(",");
+            var key = JSON.stringify(id);
+            var value = JSON.stringify(arr);
+            localStorage.setItem(key, value);
+        }
+        else {
+            alert("Please Enter Both Values");
+        }
+        document.getElementById("sk").value = '';
+        document.getElementById("element").value = '';
+    }
+
+    function removeData() {
+        let remove = document.getElementById("delete").value;
+        const key = JSON.stringify(remove);
+        localStorage.removeItem(key);
+        document.getElementById("delete").value = '';
+    }
+
+    function showData() {
+        const get = document.getElementById('key').value;
+        const key = JSON.stringify(get);
+        const resultlist = document.getElementById('result');
+
+        resultlist.innerHTML = '';
+
+        if (localStorage.getItem(key) !== null) {
+            const value = localStorage.getItem(key);
+            const arr = JSON.parse(value);
+            for (let i = 0; i < arr.length; i++) {
+                const li = document.createElement('li');
+                li.textContent = arr[i];
+                resultlist.appendChild(li);
+            }
+        }
+        else {
+            alert(`Key ${key} is not found in local Storage `);
+        }
+        document.getElementById('key').value = '';
+    }
+</script>
+
+</html>

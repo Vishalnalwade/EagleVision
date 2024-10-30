@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: lime;
+        }
+
+        form {
+            max-width: 300px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.174);
+            padding: 20px;
+            border-radius: 4px;
+        }
+
+        input {
+            display: block;
+            margin: 10px 20px;
+            padding: 8px;
+            box-sizing: border-box;
+            width: 85%;
+            border-radius: 2px;
+            border: 1.5px solid black;
+        }
+
+        button {
+            width: 85%;
+            display: block;
+            margin: 10px 20px;
+            background-color: lime;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        p {
+            margin-left: 20px;
+        }
+
+        button:hover {
+            background-color: rgb(2, 229, 2);
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+
+            <input type="text" id="signup-name" placeholder="Name">
+            <input type="email" id="signup-email" placeholder="Email">
+            <input type="number" id="signup-phone" placeholder="Mobile Number">
+            <input type="text" id="signup-username" placeholder="Username">
+            <input type="password" id="signup-password" placeholder="Password@1234">
+            <input type="password" id="signup-confirm-password" placeholder="Confirm Password">
+            <button type="submit">Sign Up</button>
+            <p>Already I have an account. <a href="LoginPage.html"> Login</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById("signup-name").value;
+            const email = document.getElementById('signup-email').value;
+            const phone = document.getElementById('signup-phone').value;
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+            const confirmPassword = document.getElementById('signup-confirm-password').value;
+
+            const data = {
+                // UserId:
+                Name: name,
+                Email: email,
+                Phone: phone,
+                Username: username,
+                Password: password,
+                ConfirmPassword: confirmPassword
+            }
+
+            let isValid = Validate(data);
+
+            if (isValid) {
+                const users = JSON.parse(localStorage.getItem('users')) || [];
+                if (users.find(user => user.username === username)) {
+                    alert('Username already exists');
+                    return;
+                }
+
+                users.push({ name,email,phone,username, password,confirmPassword});
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Signup successful!');
+                window.location.href = 'LoginPage.html';
+                document.getElementById("signup-name").value='';
+                document.getElementById('signup-email').value='';
+                document.getElementById('signup-phone').value='';
+                document.getElementById('signup-username').value='';
+                document.getElementById('signup-password').value='';
+                document.getElementById('signup-confirm-password').value='';
+            }
+            
+        });
+
+        function Validate(item) {
+            let isValid = true;
+
+            if (item.Name == '') {
+                isValid = false;
+                document.getElementById('signup-name').style.border = ("1.5px solid red");
+                document.getElementById('signup-name').style.margin=("10px 20px");
+            }
+            else {
+                document.getElementById('signup-name').style.margin = ("10px 20px");
+                document.getElementById('signup-name').style.border = ("1.5px solid lime");
+                
+            }
+            let pattern = /^([a-zA-Z0-9][a-zA-Z0-9_.]*@gmail[.]com)$/;
+            if (pattern.test(item.Email) && item.Email != '') {
+                document.getElementById('signup-email').style.margin = ("10px 20px");
+                document.getElementById('signup-email').style.border = ("1.5px solid lime");
+            }
+            else {
+                isValid = false;
+                document.getElementById('signup-email').style.margin = ("10px 20px");
+                document.getElementById('signup-email').style.border = ("1.5px solid red");
+            }
+            let nump = /^(0|91)?([7-9]{1}[0-9]{9})$/;
+            if (nump.test(item.Phone) && item.Phone != '') {
+                document.getElementById('signup-phone').style.margin = ("10px 20px");
+                document.getElementById('signup-phone').style.border = ("1.5px solid lime");
+            }
+            else {
+                isValid = false;
+                document.getElementById('signup-phone').style.margin = ("10px 20px");
+                document.getElementById('signup-phone').style.border = ("1.5px solid red");
+            }
+            if (item.Username == '') {
+                isValid = false;
+                document.getElementById('signup-username').style.margin = ("10px 20px");
+                document.getElementById('signup-username').style.border = ("1.5px solid red");
+            }
+            else {
+                document.getElementById('signup-username').style.margin = ("10px 20px");
+                document.getElementById('signup-username').style.border = ("1.5px solid lime");
+            }
+            let check = /^([A-Z]+[a-zA-Z]+[@|#|$]+[0-9]+)$/;
+            if (check.test(item.Password) && item.Password != '') {
+                document.getElementById('signup-password').style.margin = ("10px 20px");
+                document.getElementById('signup-password').style.border = ("1.5px solid lime");
+            }
+            else {
+                isValid = false;
+                document.getElementById('signup-password').style.margin = ("10px 20px");
+                document.getElementById('signup-password').style.border = ("1.5px solid red");
+            }
+            if (item.Password != item.ConfirmPassword) {
+                isValid = false;
+                document.getElementById('signup-confirm-password').style.margin =("10px 20px");
+                document.getElementById('signup-confirm-password').style.border = ("1.5px solid red");
+            }
+            else {
+                document.getElementById('signup-confirm-password').style.margin = ("10px 20px");
+                document.getElementById('signup-confirm-password').style.border = ("1.5px solid lime");
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+
+</html>

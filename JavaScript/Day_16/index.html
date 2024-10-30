@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .danger {
+            color: red;
+        }
+
+        label {
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input {
+            width: 100%;
+
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            height: 30px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+            border: 1px solid black;
+        }
+
+        button {
+            height: 50px;
+            width: 90px;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+            background-color: rgb(47, 47, 226);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <h1>Validation Form</h1>
+        <div>
+            <label for="fname">First Name</label><br>
+            <input type="text" id="fname" placeholder="Enter First Name"><br>
+            <small class="danger" id="show"></small>
+        </div>
+
+        <div>
+            <label for="lname">Last Name</label><br>
+            <input type="text" id="lname" placeholder="Enter Last Name"><br>
+            <small class="danger" id="ln"></small>
+        </div>
+
+        <div>
+            <label for="phone">Mobile Number</label><br>
+            <input type="text" id="phone" placeholder="Enter Mobile Number"><br>
+            <small class="danger" id="mobo"></small>
+        </div>
+
+        <div>
+            <label for="email">Email Id</label><br>
+            <input type="text" id="email" placeholder="Enter Email"><br>
+            <small class="danger" id="em"></small>
+        </div>
+        <div>
+            <label for="password">Password</label><br>
+            <input type="password" id="password" placeholder="Vishal@123"><br>
+            <small class="danger" id="ps"></small>
+        </div>
+        <div>
+            <label for="cpassword">Confirm Password</label><br>
+            <input type="password" id="cpassword" placeholder="Password"><br>
+            <small class="danger" id="cps"></small>
+        </div>
+        <button id="submit" type="button" onclick="validate()">Submit</button>
+    </form>
+</body>
+<script src="script.js"></script>
+
+</html>
